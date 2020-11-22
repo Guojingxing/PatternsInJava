@@ -7,6 +7,7 @@ import clothingFactory.*;
 public class ClothingStore /*implements Observable*/{
 	private Factory factory;
 	private Waiter waiter;
+	private Clients client;
 	private static Manager manager = Manager.GetInstance();
 	public ClothingStore(Factory factory) {
 		this.factory = factory;
@@ -15,13 +16,14 @@ public class ClothingStore /*implements Observable*/{
 		manager.registerObservers(factory.tailor);
 		manager.registerObservers(waiter);
 	}
-	public Clothing orderClothing(Clients client) {
-		Clothing c = null;
-		
+	public void orderClothing(Clients client) {
+		this.client = client;
 		//经理了解了客户，然后把客户的消息通知给所有的观察者
 		manager.GetClient(client);
 		manager.notifyObservers();
-		
+	}
+	public Clothing makeClothing() {
+		Clothing c = null;
 		c = factory.CreateClothing(client);
 		return c;
 	}

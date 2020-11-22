@@ -38,5 +38,6 @@ public abstract class Factory {
 		tailor.Producting();
 		
 		return c;
-	} 
+	}
+	public abstract String toString();
 }
