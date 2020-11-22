@@ -35,7 +35,7 @@ public abstract class Factory {
 		c.setColor(color);
 		c.setPattern(pattern);
 		
-		tailor.Producting();
+		tailor.Producing();
 		
 		return c;
 	}

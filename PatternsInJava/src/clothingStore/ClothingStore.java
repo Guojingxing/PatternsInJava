@@ -27,4 +27,7 @@ public class ClothingStore /*implements Observable*/{
 		c = factory.CreateClothing(client);
 		return c;
 	}
+	public void SetFactory(Factory factory) {
+		this.factory = factory;
+	}
 }

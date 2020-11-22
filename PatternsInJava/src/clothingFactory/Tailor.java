@@ -23,10 +23,10 @@ public class Tailor implements Observer{
 		this.pattern = pattern;
 		System.out.println("The tailor know all the latest data of the clothing.");
 	}
-	public void Producting() {
-		System.out.println("Producting clothes...");
+	public void Producing() {
+		System.out.println("Producing clothes...");
 		System.out.println("Style:" + style + "\nSize:" + size);
 		System.out.println("Color:" + color + "\nPattern:" + pattern);
-		System.out.println("Finishing Producting clothes...");
+		System.out.println("Finishing Producing clothes...");
 	}
 }

@@ -1,5 +1,7 @@
 package clothing;
-
+/*
+ * µ¥ÀýÄ£Ê½
+ */
 
 public class Skirt extends Clothing{
 	private static Skirt skirt = null;
